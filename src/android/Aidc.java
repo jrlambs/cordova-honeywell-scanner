@@ -231,6 +231,11 @@ public class Aidc extends CordovaPlugin implements BarcodeListener {
 				JSONObject obj = new JSONObject();
 				obj.put("success", true);
 				obj.put("data", arg0.getBarcodeData());
+				obj.put("code", arg0.getCodeId());
+				obj.put("charset", arg0.getCharset());
+				obj.put("aimId", arg0.getAimId());
+				obj.put("timestamp", arg0.getTimestamp());
+
 
 				PluginResult result = new PluginResult(PluginResult.Status.OK, obj);
 				result.setKeepCallback(true);
