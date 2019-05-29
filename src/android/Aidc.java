@@ -206,8 +206,8 @@ public class Aidc extends CordovaPlugin implements BarcodeListener {
 				JSONObject obj = args.getJSONObject(i);
 				String optionName = obj.getString("option_name");
 				String optionValue = obj.getString("option_value");
+				barcodeReader.setProperty(optionName,optionValue);
 			}
-			barcodeReader.setProperty(optionName,optionValue);
 			callbackContext.success();
 			return true;
 		}
