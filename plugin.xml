@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-	id="com.neo9.cordova-honeywell-scanner"
-	version="1.0.3">
+	id="com.jrlambs.cordova-honeywell-scanner"
+	version="1.0.5">
 
 	<name>Honeywell AIDC Barcode Scanner</name>
 	<description>Honeywell TC50/D75E Barcode Scanner and external device using the com.honeywell.aidc SDK</description>
@@ -20,14 +20,14 @@
 
 		<config-file target="res/xml/config.xml" parent="/*">
 			<feature name="HoneywellAidc">
-				<param name="android-package" value="com.lexitgroup.honeywell.Aidc" />
+				<param name="android-package" value="com.jrlambs.honeywell.Aidc" />
         <param name="onload" value="true" />
 			</feature>
 		</config-file>
 
 		<source-file src="src/android/libs/HoneywellAidc.jar" target-dir="libs" />
 
-		<source-file src="src/android/Aidc.java" target-dir="src/com/lexitgroup/honeywell" />
+		<source-file src="src/android/Aidc.java" target-dir="src/com/jrlambs/honeywell" />
 	</platform>
 
 </plugin>

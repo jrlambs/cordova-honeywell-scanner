@@ -33,6 +33,10 @@ var Aidc = function () {
   this.listConnectedBarcodeDevices = function (success_cb, error_cb) {
     exec(success_cb, error_cb, "HoneywellAidc", "listConnectedBarcodeDevices", []);
   }
+
+  this.setoptions = function(options, success_cb, error_cb) {
+    exec(success_cb, error_cb, "HoneywellAidc", "setoptions", options);
+  }
 };
 
 Aidc.prototype._success = function (barcode) {

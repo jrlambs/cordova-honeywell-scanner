@@ -1,4 +1,4 @@
-package com.lexitgroup.honeywell;
+package com.jrlambs.honeywell;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -199,6 +199,16 @@ public class Aidc extends CordovaPlugin implements BarcodeListener {
 				});
       }
 
+			return true;
+		} else if ("setoptions".equals(action)) {
+			// We unregister the current callback contextddddddd
+			for(int i=0; i < args.length(); i++){
+				JsonObject obj = args.getJsonObject();
+				String optionName = obj.getJsonString("option_name");
+				String optionValue = obj.getJsonString("option_value");
+			}
+			barcodeReader.setProperty(optionName,optionValue);
+			callbackContext.success();
 			return true;
 		}
 
